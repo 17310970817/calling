@@ -1,0 +1,26 @@
+<linearlayout xmlns:android="http://schemas.android.com/apk/res/android"
+
+    android:layout_width="fill_parent"
+
+    android:layout_height="fill_parent"
+
+    android:orientation="vertical">
+
+    <Textview
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/call_text">
+    </Textview>
+    <Edittext
+        android:id="@+id/et1"
+        android:inputtype="phone"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content">
+    </Edittext>
+    <button
+        android:id="@+id/bt1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/call_phone">
+    </button>
+</linearlayout>
