@@ -1,0 +1,28 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+    <!-- TextView 控件-->
+    <TextView
+        android:id="@+id/tv_tip_phone"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/tv_tip_phone" />
+    <!-- EditText 控件-->
+    <EditText
+        android:id="@+id/et_phone"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:inputType="phone"
+        android:layout_below="@+id/tv_tip_phone"
+        />
+    <!-- Button 控件-->
+    <Button
+        android:id="@+id/call_phone"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/btn_call_phones"
+        android:layout_below="@+id/et_phone"
+        android:onClick="callPhone"
+        />
+</RelativeLayout>

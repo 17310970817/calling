@@ -1,20 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.lauking.callph"
-    android:versioncode="1" android:versionname="1.0">
-    <uses-sdk android:minsdkversion="8" android:targetsdkversion="15"> </uses-sdk>
-    <uses-permission
-        android:name="android.permission.CALL_PHONE">
-    </uses-permission>
-    <application android:allowbackup="true"
+    package="com.example.day01"
+    android:versionCode="1"
+    android:versionName="1.0" >
+
+
+    <!-- 拨号权限 -->
+    <uses-permission android:name="android.permission.CALL_PHONE" />
+
+    <uses-sdk
+        android:minSdkVersion="8"
+        android:targetSdkVersion="21" />
+
+
+    <application
+        android:allowBackup="true"
         android:icon="@drawable/ic_launcher_background"
         android:label="@string/app_name"
-        android:theme="@style/AppTheme">
-    <activity android:name="com.example.calling.MainActivity"
-        android:label="@string/app_name">
-        <intent-filter>
-            <action android:name="android.intent.action.MAIN"> </action>
-            <category android:name="android.intent.category.LAUNCHER"> </category>
-        </intent-filter>
-    </activity>
-</application>
+        android:theme="@style/AppTheme" >
+        <activity
+            android:name="com.example.calling.MainActivity"
+            android:label="@string/app_name" >
+
+
+            <!-- 意图过滤器 -->
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <!-- 添加拨打电话的动作-->
+        <activity
+            android:name=".CallPhoneActivity"
+            android:label="@string/title_activity_call_phone" >
+        </activity>
+    </application>
 </manifest>

@@ -1,3 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="app_name">calling</string>
+
+
+    <string name="app_name">day01</string>
+    <string name="hello_world">Hello world!</string>
+
+
+    <!-- 定义字符串资源 -->
+
+    <string name="title_activity_call_phone">拨号界面</string>
+    <string name="tv_tip_phone">请输入电话号码</string>
+    <string name="btn_call_phones">拨号</string>
+
 </resources>

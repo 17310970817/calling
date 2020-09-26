@@ -1,54 +1,54 @@
 package com.example.calling;
-import android.net.Uri;
-import android.os.Bundle;
-import android.view.View;
-import android.widget.Button;
-import android.widget.EditText;
-import android.widget.Toast;
+
+
 import android.app.Activity;
 import android.content.Intent;
+import android.net.Uri;
+import android.os.Bundle;
+import android.text.TextUtils;
+import android.view.View;
+import android.widget.EditText;
+import android.widget.Toast;
 
-import com.lauking.callph.R;
+import com.example.day01.R;
+
 
 public class MainActivity extends Activity {
-    private Button bt;
-    private EditText et;
+
+
+    //声明控件对象
+    private EditText et_phone;
     @Override
-    protected void onCreate(Bundle savedInstanceState) {                  super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
-// 取得资源
-        bt = (Button) findViewById(R.id.bt1);
-        et = (EditText) findViewById(R.id.et1);
-        // 增加事件响应
-        bt.setOnClickListener(new Button.OnClickListener() {
-            @Override
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+//设置显示的视图
+        setContentView(R.layout.callphoneactivity);
 
-            public void onClick(View v) {
+//查找视图中的控件
+        et_phone = (EditText)findViewById(R.id.et_phone);
 
-                // 取得输入的电话号码串
-                String inputStr = et.getText().toString();
-// 如果输入不为空创建打电话的Intent
-                if (inputStr.trim().length() != 0) {
-                    Intent phoneIntent = new Intent(
-
-                            "android.intent.action.CALL", Uri.parse("tel:"
-
-                            + inputStr));
-
-                    // 启动
-                    startActivity(phoneIntent);
-                }
-
-// 否则Toast提示一下
-
-                else {
-
-                    Toast.makeText(MainActivity.this, "不能输入为空",
-
-                            Toast.LENGTH_LONG).show();
-
-                }
-            }
-        });
     }
+
+    /**
+     * 拨号的实现
+     * @param v
+     */
+    public void callPhone(View v){
+//获取输入的电话号码
+        String phone = et_phone.getText().toString();
+
+        if(!TextUtils.isEmpty(phone)){
+
+            Intent intent = new Intent(Intent.ACTION_CALL,Uri.parse("tel:"+phone));
+
+//执行意图
+            startActivity(intent);
+
+        }else{
+
+            Toast.makeText(this, "请输入手机号码", Toast.LENGTH_LONG).show();
+
+        }
+    }
+
 }

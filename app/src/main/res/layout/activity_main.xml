@@ -8,19 +8,16 @@
 
     <Textview
         android:layout_width="fill_parent"
-        android:layout_height="wrap_content"
-        android:text="@string/call_text">
+        android:layout_height="wrap_content">
     </Textview>
     <Edittext
         android:id="@+id/et1"
-        android:inputtype="phone"
         android:layout_width="fill_parent"
         android:layout_height="wrap_content">
     </Edittext>
     <button
         android:id="@+id/bt1"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/call_phone">
+        android:layout_height="wrap_content">
     </button>
 </linearlayout>
